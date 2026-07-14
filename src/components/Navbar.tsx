@@ -155,20 +155,20 @@ export function Navbar() {
             ))}
           </nav>
 
-          <div className="mobile-nav-item mt-8 flex flex-row gap-3">
+          <div className="mobile-nav-item mt-8 flex flex-row gap-2">
             <Link
               href="/book"
               onClick={closeMenu}
-              className="flex-1 text-center bg-accent text-white px-3 py-3.5 rounded-full font-sans uppercase text-[11px] sm:text-xs tracking-wider font-bold hover:bg-accent-hover transition-colors"
+              className="flex-1 text-center bg-accent text-white px-2 py-3 rounded-full font-sans uppercase text-[10px] tracking-wide font-bold hover:bg-accent-hover active:bg-accent-hover transition-colors whitespace-nowrap"
             >
-              Book a Strategy Call
+              Book a Call
             </Link>
             <Link
               href="/audit"
               onClick={closeMenu}
-              className="flex-1 text-center border border-white/20 text-white px-3 py-3.5 rounded-full font-sans uppercase text-[11px] sm:text-xs tracking-wider font-bold hover:bg-white/10 transition-colors"
+              className="flex-1 text-center border border-white/20 text-white px-2 py-3 rounded-full font-sans uppercase text-[10px] tracking-wide font-bold hover:bg-white/10 active:bg-white/10 transition-colors whitespace-nowrap"
             >
-              Get Free Audit
+              Free Audit
             </Link>
           </div>
         </div>

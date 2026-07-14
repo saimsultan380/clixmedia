@@ -1,12 +1,13 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Video, Search, Scissors, Image as ImageIcon, Lightbulb, Sliders } from "lucide-react";
 
 export function ServicesGrid() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [activeCard, setActiveCard] = useState<number | null>(null);
 
   useGSAP(() => {
     gsap.fromTo(
@@ -69,41 +70,75 @@ export function ServicesGrid() {
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, i) => (
-            <div
-              key={i}
-              className="service-card group relative p-[1px] rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.5)] h-full"
-            >
-              {/* Default border */}
-              <div className="absolute inset-0 bg-white/5 transition-colors duration-500" />
-
-              {/* Animated border on hover */}
+          {services.map((service, i) => {
+            const isActive = activeCard === i;
+            return (
               <div
-                className="absolute inset-[-100%] animate-[spin_3s_linear_infinite] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                style={{
-                  background: "conic-gradient(from 90deg at 50% 50%, transparent 0%, transparent 60%, #FA871F 100%)"
+                key={i}
+                role="button"
+                tabIndex={0}
+                onClick={() => setActiveCard(isActive ? null : i)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    setActiveCard(isActive ? null : i);
+                  }
                 }}
-              />
+                className={`service-card group relative p-[1px] rounded-2xl overflow-hidden transition-all duration-500 h-full cursor-pointer hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.5)] active:-translate-y-1 ${
+                  isActive ? "-translate-y-1 shadow-[0_8px_30px_rgb(0,0,0,0.5)]" : ""
+                }`}
+              >
+                <div className="absolute inset-0 bg-white/5 transition-colors duration-500" />
 
-              {/* Inner Box */}
-              <div className="relative bg-[#111216] rounded-[15px] p-8 md:p-10 z-10 w-full h-full flex flex-col overflow-hidden">
-                {/* Inner hover gradient */}
-                <div className="absolute inset-0 bg-gradient-to-r from-accent/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                <div
+                  className={`absolute inset-[-100%] animate-[spin_3s_linear_infinite] transition-opacity duration-500 ${
+                    isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100 group-active:opacity-100"
+                  }`}
+                  style={{
+                    background: "conic-gradient(from 90deg at 50% 50%, transparent 0%, transparent 60%, #FA871F 100%)"
+                  }}
+                />
 
-                <div className="relative z-10 flex items-center justify-between mb-8">
-                  <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-accent group-hover:border-accent transition-colors duration-500">
-                    <service.icon className="w-5 h-5 text-accent group-hover:text-white transition-colors duration-500" />
+                <div className="relative bg-[#111216] rounded-[15px] p-8 md:p-10 z-10 w-full h-full flex flex-col overflow-hidden">
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-r from-accent/5 via-transparent to-transparent transition-opacity duration-700 pointer-events-none ${
+                      isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100 group-active:opacity-100"
+                    }`}
+                  />
+
+                  <div className="relative z-10 flex items-center justify-between mb-8">
+                    <div
+                      className={`w-12 h-12 rounded-full border flex items-center justify-center transition-colors duration-500 ${
+                        isActive
+                          ? "bg-accent border-accent"
+                          : "bg-white/5 border-white/10 group-hover:bg-accent group-hover:border-accent group-active:bg-accent group-active:border-accent"
+                      }`}
+                    >
+                      <service.icon
+                        className={`w-5 h-5 transition-colors duration-500 ${
+                          isActive
+                            ? "text-white"
+                            : "text-accent group-hover:text-white group-active:text-white"
+                        }`}
+                      />
+                    </div>
+                    <span
+                      className={`text-4xl font-display transition-colors duration-500 ${
+                        isActive
+                          ? "text-accent/50"
+                          : "text-accent/30 group-hover:text-accent/50 group-active:text-accent/50"
+                      }`}
+                    >
+                      0{i + 1}
+                    </span>
                   </div>
-                  <span className="text-4xl font-display text-accent/30 group-hover:text-accent/50 transition-colors duration-500">
-                    0{i + 1}
-                  </span>
-                </div>
 
-                <h3 className="relative z-10 text-2xl font-display uppercase text-white mb-4">{service.title}</h3>
-                <p className="relative z-10 text-content-muted font-sans leading-relaxed flex-grow">{service.desc}</p>
+                  <h3 className="relative z-10 text-2xl font-display uppercase text-white mb-4">{service.title}</h3>
+                  <p className="relative z-10 text-content-muted font-sans leading-relaxed flex-grow">{service.desc}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

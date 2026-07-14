@@ -59,9 +59,10 @@ export function FinalCTA() {
         <div className="cta-fade">
           <Link
             href="/book"
-            className="inline-flex items-center justify-center bg-accent text-white px-8 py-4 md:px-10 md:py-5 rounded-full font-sans uppercase text-sm tracking-widest font-bold hover:bg-accent-hover transition-colors shadow-[0_0_40px_rgba(255,59,0,0.35)]"
+            className="inline-flex items-center justify-center bg-accent text-white px-5 py-3.5 sm:px-8 sm:py-4 md:px-10 md:py-5 rounded-full font-sans uppercase text-[11px] sm:text-sm tracking-wide sm:tracking-widest font-bold hover:bg-accent-hover active:bg-accent-hover transition-colors shadow-[0_0_40px_rgba(255,59,0,0.35)] whitespace-nowrap"
           >
-            Book Your Free Strategy Call
+            <span className="sm:hidden">Book a Free Strategy Call</span>
+            <span className="hidden sm:inline">Book Your Free Strategy Call</span>
           </Link>
         </div>
       </div>

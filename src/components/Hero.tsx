@@ -74,16 +74,16 @@ export function Hero() {
             of qualified buyers and sellers. Strategy, filming guidance,
             editing, SEO, and channel growth, all handled for you.
           </p>
-          <div className="hero-fade flex flex-row flex-wrap gap-3 w-full sm:w-auto">
+          <div className="hero-fade flex flex-row gap-2 sm:gap-3 w-full sm:w-auto">
             <Link
               href="/book"
-              className="bg-accent text-white px-5 py-3 sm:px-8 sm:py-4 rounded-full font-sans uppercase text-xs sm:text-sm tracking-wider font-bold hover:bg-accent-hover transition-colors text-center flex-1 sm:flex-none whitespace-nowrap flex items-center justify-center"
+              className="bg-accent text-white px-3 py-3 sm:px-8 sm:py-4 rounded-full font-sans uppercase text-[10px] sm:text-sm tracking-wide sm:tracking-wider font-bold hover:bg-accent-hover active:bg-accent-hover transition-colors text-center flex-1 sm:flex-none whitespace-nowrap flex items-center justify-center"
             >
               Book a Strategy Call
             </Link>
             <Link
               href="/audit"
-              className="border border-white/20 text-white px-5 py-3 sm:px-8 sm:py-4 rounded-full font-sans uppercase text-xs sm:text-sm tracking-wider font-bold hover:bg-white/10 transition-colors text-center flex-1 sm:flex-none whitespace-nowrap flex items-center justify-center"
+              className="border border-white/20 text-white px-3 py-3 sm:px-8 sm:py-4 rounded-full font-sans uppercase text-[10px] sm:text-sm tracking-wide sm:tracking-wider font-bold hover:bg-white/10 active:bg-white/10 transition-colors text-center flex-1 sm:flex-none whitespace-nowrap flex items-center justify-center"
             >
               Get Free Audit
             </Link>

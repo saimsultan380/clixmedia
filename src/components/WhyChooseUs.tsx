@@ -1,12 +1,13 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Check } from "lucide-react";
 
 export function WhyChooseUs() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [activeItem, setActiveItem] = useState<number | null>(null);
 
   useGSAP(() => {
     gsap.fromTo(
@@ -53,23 +54,60 @@ export function WhyChooseUs() {
         
         <div className="w-full lg:w-7/12 pt-8 lg:pt-0">
           <ul className="flex flex-col w-full border-t border-white/10">
-            {points.map((point, i) => (
-              <li 
-                key={i} 
-                className="choose-fade group flex items-center gap-6 py-8 md:py-10 border-b border-white/10 hover:border-accent/50 cursor-default transition-colors duration-500 relative pl-1"
-              >
-                {/* Background Hover Glow */}
-                <div className="absolute inset-0 bg-gradient-to-r from-accent/0 via-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none rounded-lg" />
-                
-                <div className="relative z-10 w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:border-accent group-hover:bg-accent transition-all duration-500 group-hover:scale-110">
-                  <Check className="w-5 h-5 text-white/30 group-hover:text-white transition-colors duration-500" />
-                </div>
-                
-                <span className="relative z-10 text-2xl md:text-3xl lg:text-4xl font-display text-white/50 group-hover:text-white group-hover:translate-x-4 transition-all duration-500 uppercase tracking-tight">
-                  {point}
-                </span>
-              </li>
-            ))}
+            {points.map((point, i) => {
+              const isActive = activeItem === i;
+              return (
+                <li 
+                  key={i}
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => setActiveItem(isActive ? null : i)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      setActiveItem(isActive ? null : i);
+                    }
+                  }}
+                  className={`choose-fade group flex items-center gap-6 py-8 md:py-10 border-b cursor-pointer transition-colors duration-500 relative pl-1 ${
+                    isActive
+                      ? "border-accent/50"
+                      : "border-white/10 hover:border-accent/50 active:border-accent/50"
+                  }`}
+                >
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-r from-accent/0 via-accent/5 to-transparent transition-opacity duration-700 pointer-events-none rounded-lg ${
+                      isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100 group-active:opacity-100"
+                    }`}
+                  />
+                  
+                  <div
+                    className={`relative z-10 w-10 h-10 rounded-full border flex items-center justify-center flex-shrink-0 transition-all duration-500 ${
+                      isActive
+                        ? "border-accent bg-accent scale-110"
+                        : "border-white/10 bg-white/5 group-hover:border-accent group-hover:bg-accent group-hover:scale-110 group-active:border-accent group-active:bg-accent group-active:scale-110"
+                    }`}
+                  >
+                    <Check
+                      className={`w-5 h-5 transition-colors duration-500 ${
+                        isActive
+                          ? "text-white"
+                          : "text-white/30 group-hover:text-white group-active:text-white"
+                      }`}
+                    />
+                  </div>
+                  
+                  <span
+                    className={`relative z-10 text-2xl md:text-3xl lg:text-4xl font-display uppercase tracking-tight transition-all duration-500 ${
+                      isActive
+                        ? "text-white translate-x-4"
+                        : "text-white/50 group-hover:text-white group-hover:translate-x-4 group-active:text-white group-active:translate-x-4"
+                    }`}
+                  >
+                    {point}
+                  </span>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
