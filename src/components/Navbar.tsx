@@ -143,7 +143,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={closeMenu}
-                className="mobile-nav-item group flex items-baseline justify-center gap-4 py-4 border-b border-white/10"
+                className="mobile-nav-item group flex items-baseline justify-start gap-4 py-4 border-b border-white/10"
               >
                 <span className="font-mono text-xs text-accent/70 tabular-nums shrink-0">
                   {String(i + 1).padStart(2, "0")}

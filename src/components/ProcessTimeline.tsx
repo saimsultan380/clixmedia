@@ -44,20 +44,25 @@ export function ProcessTimeline() {
   ];
 
   const StepContent = ({ step, i, align }: { step: any, i: number, align: 'left' | 'right' }) => (
-    <div className={`relative flex flex-col ${align === 'right' ? 'md:items-end md:text-right' : 'md:items-start md:text-left'} pl-16 md:pl-0 z-10 w-full`}>
+    <div className={`relative flex flex-col ${align === 'right' ? 'md:items-end md:text-right' : 'md:items-start md:text-left'} pl-12 md:pl-0 z-10 w-full`}>
       {/* Mobile Dot */}
-      <div className="md:hidden absolute left-[-8px] top-2 w-6 h-6 rounded-full bg-[#050505] border border-accent flex items-center justify-center shadow-[0_0_15px_rgba(255,59,0,0.5)] z-20">
+      <div className="md:hidden absolute left-[4px] top-2 w-6 h-6 rounded-full bg-[#050505] border border-accent flex items-center justify-center shadow-[0_0_15px_rgba(255,59,0,0.5)] z-20">
         <div className="w-2 h-2 rounded-full bg-accent" />
       </div>
+
+      {/* Mobile Bottom Mask (hides line below last dot) */}
+      {i === steps.length - 1 && (
+        <div className="md:hidden absolute left-[0px] top-[20px] bottom-[-200px] w-[30px] bg-[#050505] z-10" />
+      )}
 
       {/* Massive Background Number */}
       <div className={`hidden md:block absolute top-1/2 -translate-y-1/2 text-[120px] font-display text-white/[0.03] pointer-events-none select-none -z-10 ${align === 'right' ? 'md:-right-8' : 'md:-left-8'}`}>
         0{i + 1}
       </div>
 
-      <span className="w-fit text-accent font-mono text-sm tracking-widest uppercase mb-4 inline-block bg-accent/10 px-3 py-1 rounded-full border border-accent/20">Phase 0{i + 1}</span>
-      <h3 className="text-3xl md:text-4xl font-display text-white uppercase tracking-wide mb-4">{step.title}</h3>
-      <p className="text-lg md:text-xl text-content-muted font-sans font-light leading-relaxed max-w-sm">
+      <span className="w-fit text-accent font-mono text-sm tracking-widest uppercase mb-4 inline-block bg-accent/10 px-3 py-1 rounded-full border border-accent/20 relative z-20">Phase 0{i + 1}</span>
+      <h3 className="text-3xl md:text-4xl font-display text-white uppercase tracking-wide mb-4 relative z-20">{step.title}</h3>
+      <p className="text-lg md:text-xl text-content-muted font-sans font-light leading-relaxed max-w-sm relative z-20">
         {step.desc}
       </p>
     </div>
@@ -73,16 +78,16 @@ export function ProcessTimeline() {
           </div>
         </div>
 
-        <div className="relative py-8">
+        <div className="relative">
           {/* Desktop Center Line */}
-          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[2px] -translate-x-1/2 bg-white/5 rounded-full" />
-          <div className="progress-line-desktop hidden md:block absolute left-1/2 top-0 w-[2px] -translate-x-1/2 bg-accent h-0 shadow-[0_0_15px_#FA871F] rounded-full" />
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[2px] -translate-x-1/2 bg-white/5 rounded-full z-0" />
+          <div className="progress-line-desktop hidden md:block absolute left-1/2 top-0 w-[2px] -translate-x-1/2 bg-accent h-0 shadow-[0_0_15px_#FA871F] rounded-full z-0" />
 
           {/* Mobile Left Line */}
-          <div className="md:hidden absolute left-[23px] top-8 bottom-8 w-[2px] bg-white/5 rounded-full" />
-          <div className="progress-line-mobile md:hidden absolute left-[23px] top-8 w-[2px] bg-accent h-0 shadow-[0_0_15px_#FA871F] rounded-full" />
+          <div className="md:hidden absolute left-[15px] top-[20px] bottom-0 w-[2px] bg-white/5 rounded-full z-0" />
+          <div className="progress-line-mobile md:hidden absolute left-[15px] top-[20px] w-[2px] bg-accent h-0 shadow-[0_0_15px_#FA871F] rounded-full z-0" />
 
-          <div className="flex flex-col space-y-12 md:space-y-24">
+          <div className="flex flex-col space-y-12 md:space-y-24 relative z-20">
             {steps.map((step, i) => (
               <div key={i} className="step-item relative flex flex-col md:flex-row items-center justify-between w-full group">
 
