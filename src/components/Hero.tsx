@@ -74,16 +74,16 @@ export function Hero() {
             We help real estate agents turn video marketing into a steady source of qualified buyers and sellers. Strategy, filming guidance, editing, SEO, and channel growth, all handled for you.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0 w-full lg:w-auto">
+          <div className="flex flex-row gap-2 sm:gap-3 w-full lg:w-auto">
             <Link
               href="/book"
-              className="bg-accent text-black px-5 py-3.5 sm:px-8 sm:py-4 rounded-lg font-sans uppercase text-xs sm:text-sm tracking-wider font-bold hover:bg-accent-hover transition-colors text-center"
+              className="flex-1 lg:flex-none bg-accent text-black px-3 py-3 sm:px-8 sm:py-4 rounded-lg font-sans uppercase text-[10px] sm:text-sm tracking-wider font-bold hover:bg-accent-hover transition-colors text-center whitespace-nowrap"
             >
               Book a Strategy Call
             </Link>
             <Link
               href="/audit"
-              className="border border-white/20 text-white px-5 py-3.5 sm:px-8 sm:py-4 rounded-lg font-sans uppercase text-xs sm:text-sm tracking-wider font-bold hover:bg-white/10 transition-colors text-center"
+              className="flex-1 lg:flex-none border border-white/20 text-white px-3 py-3 sm:px-8 sm:py-4 rounded-lg font-sans uppercase text-[10px] sm:text-sm tracking-wider font-bold hover:bg-white/10 transition-colors text-center whitespace-nowrap"
             >
               Get Free Audit
             </Link>
