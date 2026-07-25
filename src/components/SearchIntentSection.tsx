@@ -97,7 +97,7 @@ export function SearchIntentSection() {
             </span>
 
             {/* Scrolling query display */}
-            <div className="relative h-10 sm:h-12 md:h-14 overflow-hidden px-14 md:px-16">
+            <div className="relative h-10 sm:h-12 md:h-14 overflow-hidden px-8 sm:px-14 md:px-16">
               {SEARCH_QUERIES.map((query, index) => (
                 <span
                   key={query}

@@ -38,7 +38,7 @@ export function StatBand() {
             <span className="text-sm font-mono tracking-widest uppercase text-content-muted">Views Generated</span>
           </div>
           <div className="stat-item flex flex-col">
-            <span className="text-5xl md:text-7xl font-display text-white mb-4">Thousands</span>
+            <span className="text-4xl sm:text-5xl md:text-7xl font-display text-white mb-4">Thousands</span>
             <span className="text-sm font-mono tracking-widest uppercase text-content-muted">Of Local Homebuyers Reached</span>
           </div>
         </div>

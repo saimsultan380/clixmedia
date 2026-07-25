@@ -91,15 +91,15 @@ export function Hero() {
         </div>
 
         {/* Two Images Side-by-Side (Horizontal row on all viewports) */}
-        <div className="hero-fade flex flex-row gap-3 md:gap-6 mt-10 md:mt-16 w-full">
-          <div className="w-[65%] h-[150px] sm:h-[300px] md:h-[400px] lg:h-[480px] relative rounded-xl sm:rounded-3xl overflow-hidden border border-white/10 group">
+        <div className="hero-fade grid grid-cols-12 gap-3 md:gap-6 mt-10 md:mt-16 w-full">
+          <div className="col-span-8 h-[150px] sm:h-[300px] md:h-[400px] lg:h-[480px] relative rounded-xl sm:rounded-3xl overflow-hidden border border-white/10 group">
             <img
               src="/Image-1.jpg"
               alt="Real estate camera filming set"
               className="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out transform group-hover:scale-103"
             />
           </div>
-          <div className="w-[35%] h-[150px] sm:h-[300px] md:h-[400px] lg:h-[480px] relative rounded-xl sm:rounded-3xl overflow-hidden border border-white/10 group">
+          <div className="col-span-4 h-[150px] sm:h-[300px] md:h-[400px] lg:h-[480px] relative rounded-xl sm:rounded-3xl overflow-hidden border border-white/10 group">
             <img
               src="/Image-2.jpg"
               alt="Real estate video monitor editing"

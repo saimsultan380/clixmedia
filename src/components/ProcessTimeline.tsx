@@ -90,9 +90,13 @@ export function ProcessTimeline() {
           <div className="flex flex-col space-y-12 md:space-y-24 relative z-20">
             {steps.map((step, i) => (
               <div key={i} className="step-item relative flex flex-col md:flex-row items-center justify-between w-full group">
+                {/* Mobile View: Render directly */}
+                <div className="md:hidden w-full">
+                  <StepContent step={step} i={i} align="left" />
+                </div>
 
-                {/* Left Side */}
-                <div className="w-full md:w-[45%] flex justify-end">
+                {/* Desktop Left Side */}
+                <div className="hidden md:flex w-[45%] justify-end">
                   {i % 2 === 0 && <StepContent step={step} i={i} align="right" />}
                 </div>
 
@@ -101,8 +105,8 @@ export function ProcessTimeline() {
                   <div className="w-3 h-3 rounded-full bg-white/20 group-hover:bg-accent transition-colors duration-500" />
                 </div>
 
-                {/* Right Side */}
-                <div className="w-full md:w-[45%] flex justify-start mt-8 md:mt-0">
+                {/* Desktop Right Side */}
+                <div className="hidden md:flex w-[45%] justify-start">
                   {i % 2 !== 0 && <StepContent step={step} i={i} align="left" />}
                 </div>
               </div>

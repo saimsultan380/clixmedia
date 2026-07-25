@@ -50,7 +50,7 @@ export function WhyChooseUs() {
           {/* Left Column: Two Vertical Images & Stats */}
           <div className="choose-fade lg:col-span-6 flex gap-4 sm:gap-6 items-stretch lg:h-[620px]">
             {/* Left Image (Tall) */}
-            <div className="w-1/2 h-[360px] sm:h-[480px] lg:h-full relative rounded-3xl overflow-hidden border border-white/20 group flex-shrink-0">
+            <div className="flex-1 min-w-0 h-[360px] sm:h-[480px] lg:h-full relative rounded-3xl overflow-hidden border border-white/20 group flex-shrink-0">
               <img
                 src="/Image-15.jpg"
                 alt="Real estate video editor filming"
@@ -58,7 +58,7 @@ export function WhyChooseUs() {
               />
             </div>
             {/* Right side stack: Shorter Image + Stats box */}
-            <div className="w-1/2 flex flex-col gap-4 sm:gap-6">
+            <div className="flex-1 min-w-0 flex flex-col gap-4 sm:gap-6">
               <div className="flex-1 min-h-[200px] sm:min-h-[280px] relative rounded-3xl overflow-hidden border border-white/20 group">
                 <img
                   src="/Image-14-1.jpg"
