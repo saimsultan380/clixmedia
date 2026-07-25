@@ -32,8 +32,8 @@ export default function Home() {
       <WhyChooseUs />
       <div className="w-full border-b border-white/10" />
       <ServicesGrid />
-      <div className="w-full border-b border-white/10" />
-      <SearchIntentSection />
+      {/* <div className="w-full border-b border-white/10" />
+      <SearchIntentSection /> */}
       <div className="w-full border-b border-white/10" />
       <ResultsSection />
       <div className="w-full border-b border-white/10" />
