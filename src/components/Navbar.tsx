@@ -80,7 +80,7 @@ export function Navbar() {
         <nav
           className={`pointer-events-auto w-full max-w-7xl py-4 px-6 md:px-8 flex justify-between items-center transition-all duration-300 rounded-full border border-white/10 ${
             isScrolled
-              ? "bg-canvas-alt/80 backdrop-blur-md shadow-lg"
+              ? "bg-canvas-alt/80 backdrop-blur-md"
               : "bg-canvas-alt/40 backdrop-blur-sm"
           }`}
         >
@@ -143,11 +143,8 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={closeMenu}
-                className="mobile-nav-item group flex items-baseline justify-start gap-4 py-4 border-b border-white/10"
+                className="mobile-nav-item group flex items-baseline justify-start py-4 border-b border-white/10"
               >
-                <span className="font-mono text-xs text-accent/70 tabular-nums shrink-0">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
                 <span className="text-3xl sm:text-4xl font-display uppercase tracking-tight text-white group-hover:text-accent transition-colors">
                   {link.label}
                 </span>

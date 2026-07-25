@@ -170,7 +170,7 @@ export function TestimonialSlider() {
                 className="shrink-0 px-0 lg:px-3"
                 style={{ width: `${100 / visibleCount}%` }}
               >
-                <div className="h-full rounded-2xl border border-white/10 bg-canvas-alt p-7 md:p-8 shadow-[0_0_50px_rgba(255,255,255,0.04),0_20px_40px_rgba(0,0,0,0.35)] flex flex-col">
+                <div className="h-full rounded-2xl border border-white/20 bg-canvas-alt p-7 md:p-8 flex flex-col">
                   <div className="text-accent text-5xl font-display leading-none mb-4 opacity-70">
                     &ldquo;
                   </div>

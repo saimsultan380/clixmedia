@@ -43,40 +43,52 @@ export function SearchIntentSection() {
   return (
     <section
       ref={containerRef}
-      className="relative px-6 md:px-12 py-28 md:py-36 text-white flex flex-col items-center text-center overflow-hidden"
+      className="relative px-6 md:px-12 py-28 md:py-36 text-white flex flex-col items-center text-center overflow-hidden bg-black border-t border-white/20"
     >
+      {/* Background modern house image */}
       <img
-        src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
-        alt=""
+        src="/People searching for.jpg"
+        alt="Real estate house search background"
         aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover scale-105"
+        className="absolute inset-0 w-full h-full object-cover scale-102"
       />
 
-      <div className="absolute inset-0 bg-canvas/80" />
-      <div className="absolute inset-0 bg-gradient-to-b from-canvas/40 via-transparent to-canvas/70" />
-      <div className="absolute inset-0 bg-accent/15 mix-blend-multiply" />
+      {/* Reduced overlay so background is clearly visible */}
+      <div className="absolute inset-0 bg-black/45 z-0" />
+      
+      {/* Top and Bottom Gradients to blend seamlessly into pure black content */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/80 opacity-90 z-0" />
 
+      {/* Content Container */}
       <div className="max-w-5xl mx-auto relative z-10 flex flex-col items-center">
-        <p className="intent-fade text-lg md:text-2xl font-sans font-light text-white/85 mb-14 md:mb-16 max-w-3xl leading-relaxed">
+        
+        {/* Paragraph: Intro */}
+        <p className="intent-fade text-lg md:text-2xl font-sans font-light text-white/90 mb-12 max-w-3xl leading-relaxed">
           Social posts disappear in a day.{" "}
           <span className="font-medium text-white">
             Real estate videos keep working for months, sometimes years.
           </span>
         </p>
 
-        <div className="intent-fade w-full max-w-4xl mb-14 md:mb-16">
-          <p className="text-sm font-mono tracking-[0.25em] uppercase text-white/50 mb-6">
+        {/* Search Bar Container */}
+        <div className="intent-fade w-full max-w-4xl mb-12 flex flex-col items-center">
+          
+          {/* Eyebrow solid orange block with black text to match screenshot */}
+          <span className="text-[10px] sm:text-xs font-mono font-black tracking-widest uppercase text-black bg-accent px-3 py-1.5 rounded-md mb-6 select-none">
             People searching for
-          </p>
+          </span>
 
-          <div className="relative mx-auto max-w-3xl rounded-2xl border border-white/15 bg-white/[0.06] backdrop-blur-md shadow-[0_0_60px_rgba(255,255,255,0.06),0_24px_60px_rgba(0,0,0,0.45)] px-5 py-5 md:px-8 md:py-6">
-            <span className="absolute left-5 md:left-8 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-accent/20 border border-accent/40 flex items-center justify-center">
+          {/* Glassy Search Input Card */}
+          <div className="relative w-full max-w-2xl rounded-2xl border border-white/20 bg-black/40 backdrop-blur-md px-5 py-5 md:px-8 md:py-6">
+            
+            {/* Search Icon Container */}
+            <span className="absolute left-5 md:left-8 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-accent">
               <svg
                 viewBox="0 0 24 24"
-                className="w-5 h-5 md:w-6 md:h-6 text-accent"
+                className="w-5 h-5 md:w-6 md:h-6"
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="2"
+                strokeWidth="2.5"
                 aria-hidden="true"
               >
                 <circle cx="11" cy="11" r="7" />
@@ -84,6 +96,7 @@ export function SearchIntentSection() {
               </svg>
             </span>
 
+            {/* Scrolling query display */}
             <div className="relative h-10 sm:h-12 md:h-14 overflow-hidden px-14 md:px-16">
               {SEARCH_QUERIES.map((query, index) => (
                 <span
@@ -102,10 +115,12 @@ export function SearchIntentSection() {
               ))}
             </div>
 
-            <span className="absolute right-5 md:right-8 top-1/2 -translate-y-1/2 hidden sm:inline-block w-2 h-2 rounded-full bg-accent animate-pulse" />
+            {/* Glowing active indicator dot */}
+            <span className="absolute right-5 md:right-8 top-1/2 -translate-y-1/2 hidden sm:inline-block w-2.5 h-2.5 rounded-full bg-accent animate-pulse" />
           </div>
         </div>
 
+        {/* Paragraph: Outro */}
         <p className="intent-fade text-lg md:text-xl font-sans font-light leading-relaxed max-w-3xl text-white/80">
           ...already have buying intent. When your videos show up for these
           searches, you&apos;re in front of the right person at the right
@@ -114,6 +129,7 @@ export function SearchIntentSection() {
             before your competitors even know they exist.
           </span>
         </p>
+
       </div>
     </section>
   );

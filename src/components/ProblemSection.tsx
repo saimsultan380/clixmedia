@@ -35,12 +35,11 @@ export function ProblemSection() {
 
   return (
     <section ref={containerRef} className="px-6 md:px-12 py-32 bg-canvas relative overflow-hidden">
-      <div className="absolute top-1/2 -left-1/4 w-1/2 h-1/2 bg-accent/10 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
         <div className="w-full lg:w-1/2 relative z-10">
           <div className="problem-fade mb-6 inline-flex items-center space-x-2 border border-white/10 rounded-full px-4 py-1.5 text-xs font-mono tracking-widest text-content-muted bg-white/5">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent shadow-[0_0_10px_#FA871F] animate-pulse" />
+            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
             <span className="uppercase text-white">The Problem</span>
           </div>
           <h2 className="problem-fade text-5xl sm:text-6xl md:text-7xl font-display text-white mb-8 uppercase leading-[0.95] tracking-tight">
@@ -50,9 +49,8 @@ export function ProblemSection() {
             But between showings, closings, and client calls, there's no time left to film consistently, let alone edit, optimize, and post. So the videos don't get made. Or they get made and nobody sees them.
           </p>
           <div className="problem-fade inline-block relative group">
-            <div className="absolute inset-0 bg-accent blur-xl opacity-20 group-hover:opacity-40 group-active:opacity-40 transition-opacity duration-500 rounded-lg" />
-            <div className="relative px-8 py-4 bg-accent/10 border border-accent/20 rounded-lg backdrop-blur-sm">
-              <p className="text-xl md:text-2xl text-accent font-display tracking-widest uppercase">
+            <div className="relative px-8 py-4 bg-white/5 border border-white/20 rounded-lg">
+              <p className="text-xl md:text-2xl text-white font-display tracking-widest uppercase">
                 That's where we come in.
               </p>
             </div>
@@ -75,33 +73,16 @@ export function ProblemSection() {
                       setActiveCard(isActive ? null : i);
                     }
                   }}
-                  className={`problem-fade group relative p-[1px] rounded-2xl overflow-hidden transition-all duration-500 cursor-pointer hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.5)] active:-translate-y-1 ${
-                    isActive ? "-translate-y-1 shadow-[0_8px_30px_rgb(0,0,0,0.5)]" : ""
+                  className={`problem-fade group relative p-6 md:p-8 bg-black rounded-2xl border border-white/20 transition-all duration-500 cursor-pointer hover:-translate-y-1 ${
+                    isActive ? "-translate-y-1" : ""
                   }`}
                 >
-                  <div className="absolute inset-0 bg-white/5 transition-colors duration-500" />
-
-                  <div
-                    className={`absolute inset-[-100%] animate-[spin_3s_linear_infinite] transition-opacity duration-500 ${
-                      isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100 group-active:opacity-100"
-                    }`}
-                    style={{
-                      background: "conic-gradient(from 90deg at 50% 50%, transparent 0%, transparent 60%, #FA871F 100%)"
-                    }}
-                  />
-
-                  <div className="relative bg-[#111216] rounded-[15px] p-6 md:p-8 z-10 w-full h-full flex flex-col md:flex-row md:items-center gap-4 md:gap-6 overflow-hidden">
-                    <div
-                      className={`absolute inset-0 bg-gradient-to-r from-accent/5 via-transparent to-transparent transition-opacity duration-700 pointer-events-none ${
-                        isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100 group-active:opacity-100"
-                      }`}
-                    />
-
+                  <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
                     <span
                       className={`relative z-10 text-4xl md:text-5xl font-display transition-colors duration-500 ${
                         isActive
-                          ? "text-accent/50"
-                          : "text-accent/30 group-hover:text-accent/50 group-active:text-accent/50"
+                          ? "text-white/60"
+                          : "text-white/20 group-hover:text-white/60 group-active:text-white/60"
                       }`}
                     >
                       0{i + 1}

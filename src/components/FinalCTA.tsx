@@ -29,42 +29,50 @@ export function FinalCTA() {
   return (
     <section
       ref={containerRef}
-      className="relative px-6 md:px-12 py-32 md:py-40 text-center overflow-hidden"
+      className="relative px-6 md:px-12 py-20 md:py-28 text-center overflow-hidden bg-black border-t border-white/20"
     >
+      {/* Background clapperboard image */}
       <img
-        src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
-        alt=""
+        src="/image-6.jpg"
+        alt="Film clapperboard background"
         aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover"
       />
 
-      <div className="absolute inset-0 bg-canvas/75" />
-      <div className="absolute inset-0 bg-gradient-to-t from-canvas/90 via-canvas/50 to-canvas/70" />
-      <div className="absolute inset-0 bg-accent/25 mix-blend-multiply" />
+      {/* Dimmed Overlay to ensure text legibility (reduced opacity so image is clearer) */}
+      <div className="absolute inset-0 bg-black/45 z-0" />
+      
+      {/* Top and Bottom Gradients to blend seamlessly into the pure black layout */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/80 opacity-80 z-0" />
 
-      <div className="max-w-4xl mx-auto relative z-10">
-        <div className="cta-fade flex justify-center mb-8">
-          <div className="inline-flex items-center space-x-2 border border-white/10 rounded-full px-4 py-1.5 text-xs font-mono tracking-widest text-content-muted bg-white/5 backdrop-blur-md">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent shadow-[0_0_10px_#FA871F] animate-pulse" />
-            <span className="uppercase text-white">Next Step</span>
-          </div>
-        </div>
-        <h2 className="cta-fade text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display text-white mb-6 uppercase leading-[0.95] tracking-tight">
-          Ready to Turn Video Marketing Into Your Best Lead Source?
+      {/* Content Container */}
+      <div className="max-w-4xl mx-auto relative z-10 flex flex-col items-center">
+        
+        {/* Eyebrow */}
+        <span className="cta-fade text-accent font-mono text-xs sm:text-sm uppercase tracking-widest mb-6 block font-semibold">
+          Ready to roll?
+        </span>
+
+        {/* Headline */}
+        <h2 className="cta-fade text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-black text-white mb-6 uppercase leading-[0.95] tracking-tight max-w-3xl">
+          Let's Get Started on Your Film or Video Project!
         </h2>
-        <p className="cta-fade text-lg md:text-xl font-sans font-light text-white/80 mb-10 md:mb-12 max-w-2xl mx-auto leading-relaxed">
-          Book a free strategy call and see exactly how real estate marketing
-          videos can bring you more qualified buyers and sellers.
+
+        {/* Subheadline */}
+        <p className="cta-fade text-sm sm:text-base md:text-lg font-sans font-light text-white/80 mb-10 md:mb-12 max-w-2xl mx-auto leading-relaxed">
+          Whether you have a clear vision or need help shaping your ideas, our team is here to guide you through every step of the production process.
         </p>
+
+        {/* CTA Button */}
         <div className="cta-fade">
           <Link
             href="/book"
-            className="inline-flex items-center justify-center bg-accent text-white px-5 py-3.5 sm:px-8 sm:py-4 md:px-10 md:py-5 rounded-full font-sans uppercase text-[11px] sm:text-sm tracking-wide sm:tracking-widest font-bold hover:bg-accent-hover active:bg-accent-hover transition-colors shadow-[0_0_40px_rgba(255,59,0,0.35)] whitespace-nowrap"
+            className="inline-flex items-center justify-center bg-accent text-black px-8 py-4 sm:px-10 sm:py-5 rounded-lg font-sans uppercase text-xs sm:text-sm tracking-widest font-black hover:bg-accent-hover active:bg-accent-hover transition-colors whitespace-nowrap"
           >
-            <span className="sm:hidden">Book a Free Strategy Call</span>
-            <span className="hidden sm:inline">Book Your Free Strategy Call</span>
+            Get Started
           </Link>
         </div>
+
       </div>
     </section>
   );

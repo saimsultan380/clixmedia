@@ -42,17 +42,9 @@ export function StatBand() {
             <span className="text-sm font-mono tracking-widest uppercase text-content-muted">Of Local Homebuyers Reached</span>
           </div>
         </div>
-        <div className="stat-item relative rounded-2xl p-[1px] overflow-hidden group max-w-5xl mx-auto shadow-[0_0_60px_rgba(255,255,255,0.06),0_20px_50px_rgba(0,0,0,0.4)]">
-          {/* Animated border line */}
-          <div
-            className="absolute inset-[-100%] animate-[spin_4s_linear_infinite] opacity-70 group-hover:opacity-100 transition-opacity duration-500"
-            style={{
-              background: "conic-gradient(from 90deg at 50% 50%, transparent 0%, transparent 70%, #FA871F 100%)"
-            }}
-          />
-
+        <div className="stat-item relative rounded-2xl group max-w-5xl mx-auto border border-white/10">
           {/* Inner Content Box */}
-          <div className="relative bg-[#16171c] rounded-2xl p-8 md:p-12 z-10 w-full h-full border border-white/10">
+          <div className="relative bg-black rounded-2xl p-8 md:p-12 z-10 w-full h-full">
             <p className="text-2xl md:text-3xl text-content leading-relaxed font-sans font-light">
               We've helped agents, brokers, and teams turn real estate marketing videos into <span className="text-white font-medium">real inbound leads</span>. Not just views. Not just likes. Actual buyers and sellers reaching out first.
             </p>

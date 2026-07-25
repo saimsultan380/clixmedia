@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-  --color-canvas: #0A0B0D;
-  --color-canvas-alt: #111216;
-  --color-accent: #FA871F;
-  /* Signal red/orange */
-  --color-accent-hover: #CC2F00;
+  --color-canvas: #000000;
+  --color-canvas-alt: #000000;
+  --color-accent: #FE7F16;
+  /* Darker orange for hover */
+  --color-accent-hover: #D46205;
   --color-content: #F3F4F6;
   --color-content-muted: #9CA3AF;
 
@@ -48,4 +48,37 @@
     opacity: 0.04;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-marquee {
+    display: flex;
+    width: max-content;
+    animation: marquee 50s linear infinite;
+  }
+}
+
+/* Lenis Smooth Scroll Core Styles */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }
