@@ -26,7 +26,7 @@ export function StatBand() {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="px-6 md:px-12 py-24 border-t border-white/10 bg-canvas-alt">
+    <section ref={containerRef} className="px-6 md:px-12 py-24 border-t border-white/10 bg-black overflow-x-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           <div className="stat-item flex flex-col">

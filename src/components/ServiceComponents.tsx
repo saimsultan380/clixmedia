@@ -17,7 +17,7 @@ export function ServiceHero({ badge, h1, subhead }: { badge: string, h1: string,
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="px-6 md:px-12 pt-40 pb-20 bg-canvas">
+    <section ref={containerRef} className="px-6 md:px-12 pt-40 pb-20 bg-black">
       <div className="max-w-5xl mx-auto">
         <Link href="/" className="s-hero-fade inline-block text-content-muted hover:text-white font-mono text-sm tracking-widest uppercase mb-12 transition-colors">
           ← Back to Services
@@ -39,7 +39,7 @@ export function ServiceHero({ badge, h1, subhead }: { badge: string, h1: string,
 
 export function DeliverablesList({ items }: { items: string[] }) {
   return (
-    <section className="px-6 md:px-12 py-16 bg-canvas-alt border-y border-white/10">
+    <section className="px-6 md:px-12 py-16 bg-black border-y border-white/10">
       <div className="max-w-5xl mx-auto">
         <h3 className="text-sm font-mono tracking-widest text-accent uppercase mb-8">Core Deliverables</h3>
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
@@ -57,7 +57,7 @@ export function DeliverablesList({ items }: { items: string[] }) {
 
 export function MetricsRow({ metrics }: { metrics: string[] }) {
   return (
-    <section className="px-6 md:px-12 py-16 bg-canvas border-b border-white/10">
+    <section className="px-6 md:px-12 py-16 bg-black border-b border-white/10">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-8 justify-between">
         {metrics.map((metric, i) => {
           const parts = metric.split("·");
@@ -101,12 +101,12 @@ export function WorkflowSteps({ steps }: { steps: { title: string, desc: string 
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="px-6 md:px-12 py-32 bg-canvas">
+    <section ref={containerRef} className="px-6 md:px-12 py-32 bg-black">
       <div className="max-w-5xl mx-auto">
         <h3 className="text-sm font-mono tracking-widest text-accent uppercase mb-16">Service Launch Workflow</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {steps.map((step, i) => (
-            <div key={i} className="w-step bg-canvas-alt p-8 border border-white/5">
+            <div key={i} className="w-step bg-black p-8 border border-white/10">
               <span className="text-3xl font-display text-white/20 mb-6 block">0{i + 1}</span>
               <h4 className="text-2xl font-display text-white uppercase mb-4">{step.title}</h4>
               <p className="text-content-muted font-sans font-light leading-relaxed">{step.desc}</p>
@@ -120,7 +120,7 @@ export function WorkflowSteps({ steps }: { steps: { title: string, desc: string 
 
 export function TwoColumnTextSection({ content }: { content: string }) {
   return (
-    <section className="px-6 md:px-12 py-20 bg-canvas border-t border-white/10">
+    <section className="px-6 md:px-12 py-20 bg-black border-t border-white/10">
       <div className="max-w-5xl mx-auto">
         <p className="text-xl md:text-2xl font-sans font-light text-white leading-relaxed">
           {content}
@@ -136,7 +136,7 @@ export function ServiceCTA({ h2, body, btn }: { h2: string, body: string, btn: s
       <div className="max-w-3xl mx-auto relative z-10">
         <h2 className="text-4xl md:text-6xl font-display text-white mb-6 uppercase leading-tight">{h2}</h2>
         <p className="text-xl font-sans font-light text-white/90 mb-10 leading-relaxed">{body}</p>
-        <Link href="/book" className="inline-block bg-canvas text-white px-10 py-5 rounded-full font-sans uppercase text-sm tracking-widest font-bold hover:bg-canvas-alt transition-colors">
+        <Link href="/book" className="inline-block bg-black text-white px-10 py-5 rounded-full font-sans uppercase text-sm tracking-widest font-bold hover:bg-black/80 transition-colors">
           {btn}
         </Link>
       </div>

@@ -34,7 +34,7 @@ export function ProblemSection() {
   ];
 
   return (
-    <section ref={containerRef} className="px-6 md:px-12 py-32 bg-canvas relative overflow-hidden">
+    <section ref={containerRef} className="px-6 md:px-12 py-32 bg-black relative overflow-hidden">
 
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
         <div className="w-full lg:w-1/2 relative z-10">

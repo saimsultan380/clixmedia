@@ -42,9 +42,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${oswald.variable} ${spaceMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${oswald.variable} ${spaceMono.variable} h-full antialiased bg-black`}
     >
-      <body className="min-h-full flex flex-col relative">
+      <body className="min-h-full flex flex-col relative bg-black">
         <div className="noise-overlay" />
         <SmoothScroller>
           <Navbar />

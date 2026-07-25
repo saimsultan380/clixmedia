@@ -80,8 +80,8 @@ export function Navbar() {
         <nav
           className={`pointer-events-auto w-full max-w-7xl py-4 px-6 md:px-8 flex justify-between items-center transition-all duration-300 rounded-full border border-white/10 ${
             isScrolled
-              ? "bg-canvas-alt/80 backdrop-blur-md"
-              : "bg-canvas-alt/40 backdrop-blur-sm"
+              ? "bg-black/80 backdrop-blur-md"
+              : "bg-black/40 backdrop-blur-sm"
           }`}
         >
           <Link
@@ -132,7 +132,7 @@ export function Navbar() {
       {/* Mobile Menu */}
       <div
         ref={menuRef}
-        className="fixed inset-0 z-40 flex flex-col bg-canvas overflow-hidden"
+        className="fixed inset-0 z-40 flex flex-col bg-black overflow-hidden"
         style={{ transform: "translateY(-100%)" }}
         aria-hidden={!isOpen}
       >

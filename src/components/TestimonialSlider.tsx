@@ -121,7 +121,7 @@ export function TestimonialSlider() {
   return (
     <section
       ref={containerRef}
-      className="px-6 md:px-12 py-32 bg-canvas overflow-hidden"
+      className="px-6 md:px-12 py-32 bg-black overflow-hidden"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -170,7 +170,7 @@ export function TestimonialSlider() {
                 className="shrink-0 px-0 lg:px-3"
                 style={{ width: `${100 / visibleCount}%` }}
               >
-                <div className="h-full rounded-2xl border border-white/20 bg-canvas-alt p-7 md:p-8 flex flex-col">
+                <div className="h-full rounded-2xl border border-white/20 bg-black p-7 md:p-8 flex flex-col">
                   <div className="text-accent text-5xl font-display leading-none mb-4 opacity-70">
                     &ldquo;
                   </div>

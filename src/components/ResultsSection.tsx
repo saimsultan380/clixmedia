@@ -74,7 +74,7 @@ export function ResultsSection() {
         </div>
 
         {/* Right Side Image Column (Proof screenshot with border-white/20 and no canvas dim overlays) */}
-        <div className="result-fade relative w-full aspect-[4/5] sm:aspect-[5/4] lg:aspect-[4/5] max-h-[560px] overflow-hidden rounded-2xl border border-white/20 bg-[#0e0f11] group">
+        <div className="result-fade relative w-full aspect-[4/5] sm:aspect-[5/4] lg:aspect-[4/5] max-h-[560px] overflow-hidden rounded-2xl border border-white/20 bg-black group">
           <img
             src="/The Proof.jpg"
             alt="Proof analytics dashboard showing client growth"

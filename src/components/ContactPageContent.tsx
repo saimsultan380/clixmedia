@@ -71,8 +71,8 @@ export function ContactPageContent() {
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-canvas/80" />
-        <div className="absolute inset-0 bg-gradient-to-b from-canvas/50 via-canvas/60 to-canvas" />
+        <div className="absolute inset-0 bg-black/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black" />
         <div className="absolute inset-0 bg-accent/15 mix-blend-multiply" />
 
         <div className="relative z-10 max-w-4xl mx-auto">
@@ -91,7 +91,7 @@ export function ContactPageContent() {
 
       <section
         ref={formRef}
-        className="px-6 md:px-12 py-20 md:py-28 bg-canvas border-t border-white/5"
+        className="px-6 md:px-12 py-20 md:py-28 bg-black border-t border-white/5"
       >
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-20">
           <div className="lg:col-span-5">
@@ -156,7 +156,7 @@ export function ContactPageContent() {
                       type="text"
                       autoComplete="name"
                       placeholder="Your name"
-                      className="w-full rounded-xl border border-white/15 bg-canvas/60 px-4 py-3.5 text-white placeholder:text-white/35 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/40 transition-colors font-sans"
+                      className="w-full rounded-xl border border-white/15 bg-black px-4 py-3.5 text-white placeholder:text-white/35 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/40 transition-colors font-sans"
                     />
                   </label>
                   <label className="flex flex-col gap-2">
@@ -169,7 +169,7 @@ export function ContactPageContent() {
                       type="email"
                       autoComplete="email"
                       placeholder="you@example.com"
-                      className="w-full rounded-xl border border-white/15 bg-canvas/60 px-4 py-3.5 text-white placeholder:text-white/35 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/40 transition-colors font-sans"
+                      className="w-full rounded-xl border border-white/15 bg-black px-4 py-3.5 text-white placeholder:text-white/35 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/40 transition-colors font-sans"
                     />
                   </label>
                 </div>
@@ -182,7 +182,7 @@ export function ContactPageContent() {
                     name="market"
                     type="text"
                     placeholder="e.g. Dallas, TX"
-                    className="w-full rounded-xl border border-white/15 bg-canvas/60 px-4 py-3.5 text-white placeholder:text-white/35 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/40 transition-colors font-sans"
+                    className="w-full rounded-xl border border-white/15 bg-black px-4 py-3.5 text-white placeholder:text-white/35 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/40 transition-colors font-sans"
                   />
                 </label>
 
@@ -195,7 +195,7 @@ export function ContactPageContent() {
                     name="message"
                     rows={5}
                     placeholder="Tell us what you're looking for..."
-                    className="w-full rounded-xl border border-white/15 bg-canvas/60 px-4 py-3.5 text-white placeholder:text-white/35 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/40 transition-colors font-sans resize-y min-h-[140px]"
+                    className="w-full rounded-xl border border-white/15 bg-black px-4 py-3.5 text-white placeholder:text-white/35 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/40 transition-colors font-sans resize-y min-h-[140px]"
                   />
                 </label>
 

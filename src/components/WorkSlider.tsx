@@ -81,10 +81,10 @@ export function WorkSlider() {
         <div className="slider-fade w-full relative">
           <div 
             ref={slideRef}
-            className="w-full aspect-[16/10] md:aspect-[16/9] rounded-3xl overflow-hidden border border-white/20 bg-[#0e0f11] flex flex-col"
+            className="w-full rounded-2xl sm:rounded-3xl overflow-hidden border border-white/20 bg-black flex flex-col"
           >
-            {/* Top Area: Slide Image */}
-            <div className="relative flex-1 overflow-hidden">
+            {/* Image only — taller on mobile, not shared with caption height */}
+            <div className="relative w-full aspect-[4/5] sm:aspect-[16/10] md:aspect-[16/9] overflow-hidden">
               <img
                 src={SLIDES[activeIndex].image}
                 alt={SLIDES[activeIndex].title}
@@ -92,12 +92,12 @@ export function WorkSlider() {
               />
             </div>
 
-            {/* Bottom Area: Dark Gray Info Bar */}
-            <div className="bg-[#18181b] border-t border-white/5 px-6 py-6 sm:py-8 text-center flex flex-col justify-center select-none">
-              <span className="text-[10px] sm:text-xs font-mono tracking-[0.2em] text-accent uppercase mb-2 block font-semibold">
+            {/* Compact caption bar on mobile */}
+            <div className="bg-black border-t border-white/10 px-4 py-3 sm:px-6 sm:py-5 md:py-6 text-center flex flex-col justify-center select-none">
+              <span className="text-[9px] sm:text-xs font-mono tracking-[0.2em] text-accent uppercase mb-1 sm:mb-2 block font-semibold">
                 {SLIDES[activeIndex].subtitle}
               </span>
-              <h3 className="text-lg sm:text-xl md:text-2xl font-display font-medium text-white uppercase tracking-wider">
+              <h3 className="text-sm sm:text-xl md:text-2xl font-display font-medium text-white uppercase tracking-wider leading-snug">
                 {SLIDES[activeIndex].title}
               </h3>
             </div>

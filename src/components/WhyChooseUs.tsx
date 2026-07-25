@@ -66,7 +66,7 @@ export function WhyChooseUs() {
                   className="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out transform group-hover:scale-103"
                 />
               </div>
-              <div className="bg-[#0b0b0d] border border-white/20 rounded-3xl p-5 flex flex-col justify-center flex-shrink-0">
+              <div className="bg-black border border-white/20 rounded-3xl p-5 flex flex-col justify-center flex-shrink-0">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <div className="text-2xl sm:text-3xl lg:text-4xl font-display font-black leading-none mb-1">

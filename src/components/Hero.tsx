@@ -44,7 +44,7 @@ export function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 pt-36 pb-16 md:pt-44 md:pb-20 bg-black"
+      className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 pt-36 pb-16 md:pt-44 md:pb-20 bg-black overflow-x-hidden"
     >
       {/* Background is pure black - no bg shadow gradient as requested */}
       <div className="relative z-10 max-w-7xl mx-auto w-full flex flex-col">
@@ -74,16 +74,16 @@ export function Hero() {
             We help real estate agents turn video marketing into a steady source of qualified buyers and sellers. Strategy, filming guidance, editing, SEO, and channel growth, all handled for you.
           </p>
           
-          <div className="flex flex-row gap-3 flex-shrink-0">
+          <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0 w-full lg:w-auto">
             <Link
               href="/book"
-              className="bg-accent text-black px-6 py-3.5 sm:px-8 sm:py-4 rounded-lg font-sans uppercase text-xs sm:text-sm tracking-wider font-bold hover:bg-accent-hover transition-colors text-center whitespace-nowrap"
+              className="bg-accent text-black px-5 py-3.5 sm:px-8 sm:py-4 rounded-lg font-sans uppercase text-xs sm:text-sm tracking-wider font-bold hover:bg-accent-hover transition-colors text-center"
             >
               Book a Strategy Call
             </Link>
             <Link
               href="/audit"
-              className="border border-white/20 text-white px-6 py-3.5 sm:px-8 sm:py-4 rounded-lg font-sans uppercase text-xs sm:text-sm tracking-wider font-bold hover:bg-white/10 transition-colors text-center whitespace-nowrap"
+              className="border border-white/20 text-white px-5 py-3.5 sm:px-8 sm:py-4 rounded-lg font-sans uppercase text-xs sm:text-sm tracking-wider font-bold hover:bg-white/10 transition-colors text-center"
             >
               Get Free Audit
             </Link>

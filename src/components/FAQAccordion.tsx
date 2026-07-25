@@ -61,7 +61,7 @@ export function FAQAccordion() {
   return (
     <section
       ref={containerRef}
-      className="relative px-6 md:px-12 py-28 md:py-36 bg-canvas-alt overflow-hidden border-y border-white/5"
+      className="relative px-6 md:px-12 py-28 md:py-36 bg-black overflow-hidden border-y border-white/5"
     >
       <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
