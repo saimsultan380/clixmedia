@@ -8,17 +8,22 @@ import Link from "next/link";
 const contactDetails = [
   {
     label: "Email",
-    value: "hello@clixmedia.com",
-    href: "mailto:hello@clixmedia.com",
+    value: "growth@clixmedia.online",
+    href: "mailto:growth@clixmedia.online",
   },
   {
-    label: "Book a call",
-    value: "Schedule a strategy session",
-    href: "/book",
+    label: "Call",
+    value: "+17867880429",
+    href: "tel:+17867880429",
   },
   {
-    label: "Response time",
-    value: "Usually within 24 hours",
+    label: "WhatsApp",
+    value: "+923297909105",
+    href: "https://wa.me/923297909105",
+  },
+  {
+    label: "Address",
+    value: "Baytown Houston, Tx",
     href: null,
   },
 ];

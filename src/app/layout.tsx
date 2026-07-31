@@ -27,10 +27,9 @@ export const metadata: Metadata = {
   description: "Real estate marketing agency website",
   icons: {
     icon: [
-      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
-      { url: "/clixmedia_logo.png", type: "image/png" },
+      { url: "/clixmedia-logo-main.jpeg", type: "image/jpeg" },
     ],
-    apple: [{ url: "/apple-icon.png", type: "image/png", sizes: "180x180" }],
+    apple: [{ url: "/clixmedia-logo-main.jpeg", type: "image/jpeg" }],
   },
 };
 

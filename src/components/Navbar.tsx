@@ -89,7 +89,7 @@ export function Navbar() {
             className="z-50 flex items-center gap-2.5 hover:opacity-90 transition-opacity"
           >
             <img
-              src="/clixmedia_logo.png"
+              src="/clixmedia-logo-main.jpeg"
               alt="Clix Media"
               className="h-8 w-8 object-contain"
             />

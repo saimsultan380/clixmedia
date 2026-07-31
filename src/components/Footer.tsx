@@ -102,7 +102,7 @@ export function Footer() {
               className="inline-flex items-center gap-2.5 hover:opacity-90 transition-opacity mb-6"
             >
               <img
-                src="/clixmedia_logo.png"
+                src="/clixmedia-logo-main.jpeg"
                 alt="Clix Media"
                 className="h-8 w-8 object-contain"
               />
@@ -176,16 +176,22 @@ export function Footer() {
             <div className="flex flex-col gap-5 text-sm font-sans font-light">
               <div>
                 <span className="block text-[10px] font-mono uppercase text-white/40 tracking-wider mb-1">Address</span>
-                <span className="text-white/80">London, United Kingdom</span>
+                <span className="text-white/80">Baytown Houston, Tx</span>
               </div>
               <div>
                 <span className="block text-[10px] font-mono uppercase text-white/40 tracking-wider mb-1">Phone</span>
-                <a href="tel:+447618523398" className="text-white/80 hover:text-accent transition-colors">+44 761 852 3398</a>
+                <a href="tel:+17867880429" className="text-white/80 hover:text-accent transition-colors">+17867880429 Call</a>
+              </div>
+              <div>
+                <span className="block text-[10px] font-mono uppercase text-white/40 tracking-wider mb-1">WhatsApp</span>
+                <a href="https://wa.me/923297909105" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-accent transition-colors">
+                  +923297909105
+                </a>
               </div>
               <div>
                 <span className="block text-[10px] font-mono uppercase text-white/40 tracking-wider mb-1">Email</span>
-                <a href="mailto:hello@clixmedia.co" className="text-white/80 hover:text-accent transition-colors">
-                  hello@clixmedia.co
+                <a href="mailto:growth@clixmedia.online" className="text-white/80 hover:text-accent transition-colors">
+                  growth@clixmedia.online
                 </a>
               </div>
             </div>
